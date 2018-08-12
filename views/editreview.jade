@@ -1,0 +1,14 @@
+extends layout
+block content
+  .container
+    .row
+     h1 Welcome, here's where you can edit a review
+     .formHold
+       form(method="post")
+        each review in indOne
+         fieldset
+          label(for="name") Edit Reviewer's Name:
+          input(name="name", type="text", value="#{review.name}") 
+          label(for="content") Edit Review:
+          input(name="content", type="text", value="#{review.content}") 
+          button.button(type="submit") Edit This Review
